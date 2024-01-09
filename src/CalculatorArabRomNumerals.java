@@ -29,6 +29,7 @@ public class CalculatorArabRomNumerals {
                 " число действие число (например 3 - 4 или X + I):  ");
 
         boolean str = false;
+        userInput = userInput.replaceAll("[-+*/]", " $0 ").replace("  ", " ").trim();
         String[] user = userInput.split(" ");
         System.out.println(userInput);
         if (user.length < 3) throw new Exception("Строка не является математической операцией");
@@ -71,6 +72,7 @@ public class CalculatorArabRomNumerals {
         String userInput;
         boolean str = false;
         userInput = scan.nextLine();
+        userInput = userInput.replaceAll("[-+*/]", " $0 ").replace("  ", " ").trim();
         String[] user = userInput.split(" ");
         System.out.println(userInput);
 
